@@ -1,9 +1,8 @@
-package com.example.football.util;
+package softuni.exam.instagraphlite.util;
 
 import org.springframework.stereotype.Component;
 
 import javax.validation.Validator;
-
 
 @Component
 public class ValidationUtilsImpl implements ValidationUtils {
@@ -14,9 +13,7 @@ public class ValidationUtilsImpl implements ValidationUtils {
     }
 
     @Override
-    public <T> boolean isValid(T entity) {
-
+    public <T> Boolean isValid(T entity) {
         return validator.validate(entity).isEmpty();
     }
-
 }

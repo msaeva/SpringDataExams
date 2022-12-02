@@ -36,9 +36,9 @@ public class ApplicationBeanConfiguration {
                 LocalDate.parse(json.getAsString());
 
         Gson gson = new GsonBuilder().setPrettyPrinting()
-                .setDateFormat("dd/mm/yyyy")
-                .registerTypeAdapter(LocalDate.class, new LocalDateAdapter())
-                .registerTypeAdapter(LocalDate.class, deserializer)
+              //  .setDateFormat("dd/mm/yyyy")
+              //  .registerTypeAdapter(LocalDate.class, new LocalDateAdapter())
+             //   .registerTypeAdapter(LocalDate.class, deserializer)
                 .create();
 
         return gson;
